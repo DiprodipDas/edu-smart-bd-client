@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC6LNhxGdqVtW1hg5OmHwCdgW_EfHXd16g",
-  authDomain: "edu-smart-bd.firebaseapp.com",
-  projectId: "edu-smart-bd",
-  storageBucket: "edu-smart-bd.appspot.com",
-  messagingSenderId: "511237488577",
-  appId: "1:511237488577:web:6c3ed8bc17064058513940"
+  apiKey: process.env.REACT_APP_apiKey ,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase
