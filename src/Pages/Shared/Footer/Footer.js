@@ -2,7 +2,7 @@ import React from 'react';
 import { FaFacebook, FaYoutube } from 'react-icons/fa';
 const Footer = () => {
     return (
-        <div className='bg-dark py-5'>
+        <div className='bg-dark py-5 mt-3'>
             <p className='text-light text-center'>ⒸAll right reserved by eduSmart BD</p>
             <FaFacebook className='text-light me-2 ms-5'></FaFacebook>
             <FaYoutube className='text-light '></FaYoutube>

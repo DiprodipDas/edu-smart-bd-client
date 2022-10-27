@@ -30,7 +30,7 @@ const CoursesSummaryCart = ({ course }) => {
                 <Card.Text>
                     {
                         details.length > 100 ?
-                            <p>{details.slice(0, 150) + '....'}<Link to={`/courses/${_id}`}><button className='btn btn-primary'>See Details</button></Link> </p>
+                            <p>{details.slice(0, 150) + '....'}<Link to={`/courses/${_id}`}><button className='btn btn-primary'>Get Premium access to see details & add to cart.</button></Link> </p>
                             :
                             { details }
                     }
