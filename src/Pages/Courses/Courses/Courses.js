@@ -16,7 +16,9 @@ const Courses = () => {
         <Card.Text>
          {details}
         </Card.Text>
-        <Button variant="primary">Enroll Now</Button>
+        <Button variant="primary" className='me-2'>Enroll Now</Button>
+        <Button  variant="primary">Download PDF</Button>
+
       </Card.Body>
     </Card>
         </div>
