@@ -1,4 +1,4 @@
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
@@ -39,8 +39,8 @@ const Login = () => {
         })
     }
 
-    const {providerLogin}=useContext(AuthContext);
-
+    const {providerLogin,gitProviderLogin}=useContext(AuthContext);
+    const githubProvider= new GithubAuthProvider()
     const googleProvider = new GoogleAuthProvider()
     const handleGoogleSignIn=()=>{
        providerLogin(googleProvider)
@@ -49,6 +49,14 @@ const Login = () => {
         console.log(user);
        })
        .catch(error=>console.error(error));
+    }
+    const handleGithubSignIn=()=>{
+     gitProviderLogin(githubProvider)
+     .then(result=>{
+        const user=result.user;
+        console.log(user);
+     })
+     .catch(error=>console.error(error));
     }
     return (
         <div>
@@ -71,7 +79,7 @@ const Login = () => {
       </Form>
       <p>Don't have an account?<Link to='/register'>Please Register</Link></p>
       <Button onClick={handleGoogleSignIn} className='my-3  d-block' variant="outline-primary"><FaGoogle className='me-2'></FaGoogle>Continue With Google</Button>
-      <Button variant="outline-dark"><FaGithub className='me-2'></FaGithub>Continue With Github</Button>
+      <Button onClick={handleGithubSignIn} variant="outline-dark"><FaGithub className='me-2'></FaGithub>Continue With Github</Button>
         </div>
     );
 };
