@@ -74,3 +74,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ###### Live website link
 [https://edu-smart-bd.firebaseapp.com/]
+
+### What I am do in this project
+
+* I make a educational website.
+* In this website their are 6 different course category and each category has 2 couses.
+* a user can visit this website anytime without login.When anyone try to see course details than they have to login this websites.otherwise they cannot see couse details.
+* when a user visit course details page then he see a add to cart button.When he click this button,than he successfully added those particular course on his cart.
+* then he returned course page from the add to cart page.On the other hand there are a pdf downloader also.When any user click this button then the course outline pdf has been downloaded locally.  
+
+### Thanks
