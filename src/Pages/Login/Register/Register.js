@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Register = () => {
@@ -32,7 +33,8 @@ const Register = () => {
         })
     }
     return (
-        <Form onSubmit={handleSubmit}>
+        <div>
+            <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>Your Name</Form.Label>
           <Form.Control name="name" type="text" placeholder="Enter name" />
@@ -57,6 +59,8 @@ const Register = () => {
           {error}
           </Form.Text>
       </Form>
+      <p>Already have an account?<Link to='/login'>Please Login</Link></p>
+        </div>
     );
 };
 

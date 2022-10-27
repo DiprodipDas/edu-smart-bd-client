@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 
@@ -69,6 +69,7 @@ const Login = () => {
          {error}
           </Form.Text>
       </Form>
+      <p>Don't have an account?<Link to='/register'>Please Register</Link></p>
       <Button onClick={handleGoogleSignIn} className='my-3  d-block' variant="outline-primary"><FaGoogle className='me-2'></FaGoogle>Continue With Google</Button>
       <Button variant="outline-dark"><FaGithub className='me-2'></FaGithub>Continue With Github</Button>
         </div>
