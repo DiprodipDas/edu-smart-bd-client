@@ -24,14 +24,14 @@ const Header = () => {
         <Navbar className='mb-4' collapseOnSelect expand="lg" bg="light" variant="light">
         <Container>
             <img className='rounded-5 me-2' style={{height:"30px"}} src="https://media.istockphoto.com/vectors/open-book-color-vector-template-icon-vector-id1197901679?k=20&m=1197901679&s=612x612&w=0&h=QjmxcWwrj_D_IHgwt-9dvAdChyI1Vtr8bmQquYVkLE4=" alt="" />
-          <Navbar.Brand href="#home">eduSmart BD</Navbar.Brand>
+          <Navbar.Brand href="/">eduSmart BD</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-           <Button variant="primary" className='me-2 mb-2'> <Nav.Link><Link className='text-light ' to={'/'}>Courses</Link></Nav.Link></Button>
+           <Button variant="primary" className='me-2 mb-2'> <Nav.Link><Link className='text-light text-decoration-none ' to={'/'}>Courses</Link></Nav.Link></Button>
             {/* <Nav.Link ><Link to={'/courses/:id'}>Courses</Link></Nav.Link> */}
-             <Button variant="primary" className='me-2 mb-2'> <Nav.Link ><Link  className='text-light ' to={'/faq'}>FAQ</Link></Nav.Link></Button>
-           <Button variant="primary" className='me-2 mb-2' >   <Nav.Link ><Link className='text-light ' to={'/blog'}>Blog</Link></Nav.Link></Button>
+             <Button variant="primary" className='me-2 mb-2'> <Nav.Link ><Link  className='text-light text-decoration-none ' to={'/faq'}>FAQ</Link></Nav.Link></Button>
+           <Button variant="primary" className='me-2 mb-2' >   <Nav.Link ><Link className='text-light text-decoration-none ' to={'/blog'}>Blog</Link></Nav.Link></Button>
             </Nav>
             <Nav>
               <Nav.Link href="#deets">
@@ -39,12 +39,12 @@ const Header = () => {
                     user?.uid ?
                     <>
                     <span>{user?.displayName}</span>
-                    <Button onClick={handleLogOut} variant="primary">Log out</Button>
+                    <Button onClick={handleLogOut} className='mx-2 fw-bold px-3' variant="primary">Log out</Button>
                     </>
                     :
                     <>
-                    <Button variant="primary" className='me-2 mb-2'><Link className='text-light' to='/login'>Login</Link></Button>
-                   <Button variant="primary" className='me-2 mb-2'> <Link className='text-light' to='/register'>Register</Link></Button>
+                    <Button variant="primary" className='me-2 mb-2'><Link className='text-light text-decoration-none fw-bold' to='/login'>Login</Link></Button>
+                   <Button variant="primary" className='me-2 mb-2'> <Link className='text-light text-decoration-none fw-bold' to='/register'>Register</Link></Button>
                     
                     </>
                 }  

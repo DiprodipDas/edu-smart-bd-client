@@ -73,7 +73,7 @@ const Register = () => {
           {error}
           </Form.Text>
       </Form>
-      <p>Already have an account?<Link to='/login'>Please Login</Link></p>
+      <p>Already have an account?<Link className='text-decoration-none' to='/login'>Please Login</Link></p>
         </div>
     );
 };

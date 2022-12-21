@@ -77,7 +77,7 @@ const Login = () => {
          {error}
           </Form.Text>
       </Form>
-      <p>Don't have an account?<Link to='/register'>Please Register</Link></p>
+      <p>Don't have an account?<Link className='text-decoration-none' to='/register'>Please Register</Link></p>
       <Button onClick={handleGoogleSignIn} className='my-3  d-block' variant="outline-primary"><FaGoogle className='me-2'></FaGoogle>Continue With Google</Button>
       <Button onClick={handleGithubSignIn} variant="outline-dark"><FaGithub className='me-2 mb-2'></FaGithub>Continue With Github</Button>
         </div>

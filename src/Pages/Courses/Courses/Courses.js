@@ -16,8 +16,8 @@ const Courses = () => {
         <Card.Text>
          {details}
         </Card.Text>
-        <Button variant="primary" className='me-2 '><Link className='text-light' to='/cart'>Checkout Now</Link></Button>
-        <Button  variant="primary">Download PDF</Button>
+        <Button variant="primary" className='me-2  '><Link className='text-light fw-bold text-decoration-none' to='/cart'>Checkout Now</Link></Button>
+        <Button className='fw-bold'  variant="primary">Download PDF</Button>
 
       </Card.Body>
     </Card>
